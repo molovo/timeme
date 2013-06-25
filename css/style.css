@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,300italic,400italic,700italic);
+@import url('melody.css');
+
+header#top {
+	border-bottom: 1px solid rgb(193,193,193);
+}
+
+li {
+	list-style: disc inside;
+}
+
+input[type="text"] {
+	padding: .25em .75em;
+	border: 1px solid rgb(193,193,193);
+	border-radius: .25em;
+	font-size: 1em;
+	margin: 0 0 1.5em;
+}
+	input.error {
+		border: 2px solid red;
+	}
+	input[type="submit"], input[type="reset"] {
+		height: 3em;
+		vertical-align: middle;
+		display: inline-block;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+
+a.button {
+	background: rgb(100,100,100);
+	border-radius: .25em;
+	display: inline-block;
+	padding: .25em .75em;
+	float: right;
+	color: white;
+	text-decoration: none;
+}
+
+code {
+	font-family: monospace;
+	color: rgb(100,100,100);
+}
+pre code {
+	font-size: .75em;
+}
+
+footer#bottom {
+	border-top: 1px solid rgb(193,193,193);
+}

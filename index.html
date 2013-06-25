@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>TimeMe</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Favicons
+  ================================================== -->
+	<link rel="shortcut icon" href="img/favicon.png">
+
+	<script type="text/javascript" src="//use.typekit.net/daj1asl.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+	<div class="container">
+
+		<header class="grid 1of1" id="top">
+			<a href="http://github.com/molovo/timeme" class="button">View on Github</a>
+
+			<h3>TimeMe</h3>
+			<p>Simple, non-invasive JavaScript time sanitisation.</p>
+		</header>
+
+		<section class="grid 2of3 content">
+			<p>
+				The time is validated on blur, and converted into an 'Nh Nm' format for easy reading, from an array of accepted inputs. Optionally, the time can then be converted to an integer minute value on form submit, to allow it to be stored as such in the database and used in calculations.
+			</p>
+
+			<form action="" class="timeMe-form">
+				<p>Try it out now.</p>
+				<label for="edDate">Time:</label>
+				<input type="text" class="timeMe" name="time" />
+				<input type="reset"><input type="submit">
+			</form>
+
+			<p>
+				If the time is valid, the field is updated. If not, a class of <code>error</code> is applied to the input.
+			</p>
+
+			<p>
+				To implement, call the script on your page, and apply a class of <code>timeMe</code> to each input element you want validated. To convert the time to minutes on form submit, add a class of <code>timeMe-form</code> to the parent form element. Simples
+			</p>
+
+			<pre><code>
+&lt;form action="" class="timeMe-form"&gt;
+  &lt;input type="text" class="timeMe" /&gt;
+  &lt;script src="js/timeme.min.js"&gt;&lt;/script&gt;
+&lt;/form&gt;
+			</code></pre>
+		</section>
+
+		<section class="grid 1of3 additional">
+			<p>
+				Accepted input formats:
+				<ul>
+					<li><small>12&nbsp;&nbsp;<code style="display: inline-block;">// Default is minutes</code></small></li>
+					<li><small>12m</small></li>
+					<li><small>12h</small></li>
+					<li><small>12u&nbsp;&nbsp;<code style="display: inline-block;">// u is a 'unit of time'. Default is 6m</code></small></li>
+					<li><small>12h8</small></li>
+					<li><small>12h8m</small></li>
+					<li><small>12h 8</small></li>
+					<li><small>12h 8m</small></li>
+				</ul>
+			</p>
+		</section>
+
+		<footer class="grid 1of1" id="bottom">
+			<p class="center">
+				<small>A small thing by <a href="http://molovo.co.uk">molovo</a>.</small>
+			</p>
+		</footer>
+
+	</div>
+
+	<script>//var dateFormat = 'MM/DD/YYYY';</script>
+	<script src="js/timeMe.min.js"></script>
+</body>
+</html>
